@@ -1,4 +1,4 @@
-package com.mtattab.emailservice.controller;
+package com.mtattab.emailservice.restcontroller;
 
 import com.mtattab.emailservice.model.ResponseRestModel;
 import lombok.extern.slf4j.Slf4j;
