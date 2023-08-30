@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@RepositoryRestResource(exported = false)
+//@RepositoryRestResource(exported = false)
 @Repository
 public interface EmailRepository extends JpaRepository<EmailTableEntity, Long> {
     @Query("SELECT u.email FROM EmailTableEntity u")
