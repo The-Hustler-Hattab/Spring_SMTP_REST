@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="Description" content="Enter your description here"/>
+        <meta name="Main Page" content="OAuth github login"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" th:href="@{/assets/css/styles.css}">
@@ -29,7 +29,7 @@
                 <h3 class="text-center">GitHub OAuth Login</h3>
               </div>
               <div class="card-body">
-                <form th:action="@{/getListOfEmails}" method="GET">
+                <form th:action="@{/form}" method="GET">
                   <button type="submit" class="btn btn-primary btn-block">Login with GitHub</button>                  
                 </form>
               </div>

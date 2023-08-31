@@ -16,6 +16,8 @@ public class ProjectSecurityConfig  {
         http.authorizeRequests()
                 .requestMatchers("/swagger-ui/index.html").permitAll()
                 .requestMatchers("/").permitAll()
+                .requestMatchers("/css/**","/img/**","/js/**").permitAll()
+
 
         .anyRequest().authenticated().and().oauth2Login()
 
