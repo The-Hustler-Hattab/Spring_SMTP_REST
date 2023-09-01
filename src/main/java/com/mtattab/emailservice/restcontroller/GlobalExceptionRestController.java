@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 
 @Slf4j
 @RestControllerAdvice(annotations = RestController.class)
-public class GlobalExceptionController {
+public class GlobalExceptionRestController {
 
     @ExceptionHandler({Exception.class})
     public ResponseEntity<ResponseRestModel> exceptionHandler(Exception exception){

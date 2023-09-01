@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.Arrays;
+
 import java.util.List;
 
 @Controller
@@ -42,9 +42,9 @@ public class HomeController {
 
     @PostMapping("/form")
     public String submitForm(@ModelAttribute("emailModel") EmailJsonModel formData,  RedirectAttributes redirectAttributes) {
-        System.out.println(formData);
+
         ResponseRestModel responseRestModel= emailController.sendEmail(formData).getBody();
-        System.out.println(responseRestModel);
+
         boolean submissionSuccess = responseRestModel.getStatusCode() == 200;
         if (submissionSuccess){
             redirectAttributes.addFlashAttribute("submissionSuccess", true);

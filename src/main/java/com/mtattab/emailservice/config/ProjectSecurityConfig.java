@@ -13,16 +13,17 @@ public class ProjectSecurityConfig  {
 //        http.authorizeRequests().anyRequest().permitAll()
 //                .and()
 //                .csrf().disable();
+
+
         http.authorizeRequests()
-                .requestMatchers("/swagger-ui/index.html").permitAll()
-                .requestMatchers("/").permitAll()
+                .requestMatchers("/","/about").permitAll()
                 .requestMatchers("/css/**","/img/**","/js/**").permitAll()
 
 
         .anyRequest().authenticated().and().oauth2Login()
 
-                .and().csrf().disable();
 
+;
         return http.build();
     }
 
