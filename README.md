@@ -7,8 +7,7 @@ Welcome to the Email Sending Form Project! This project provides a simple web ap
 - [Features](#features)
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-- [Usage](#usage)
+    - [Installation and Setup](#installation)
 
 
 
