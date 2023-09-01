@@ -33,7 +33,8 @@ Welcome to the Email Sending Form Project! This project provides a simple web ap
 
 ### Installation
 
-1. Clone this repository to your local machine: git clone https://github.com/The-Hustler-Hattab/Spring_SMTP_REST.git
+1. Clone this repository to your local machine: 
+git clone https://github.com/The-Hustler-Hattab/Spring_SMTP_REST.git
 2. Setup db tables using schema.sql present in resources folder.
 3. Add connection details to application.properties.
 4. Add GitHub Oauth credentials to application.properties.
