@@ -46,7 +46,6 @@ git clone https://github.com/The-Hustler-Hattab/Spring_SMTP_REST.git
 
 ### Demo 
 
-
-<h4>link here</h4>
+link here
 ---
 Project developed by Mohammed Hattab (https://github.com/The-Hustler-Hattab)
