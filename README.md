@@ -24,7 +24,7 @@ Welcome to the Email Sending Form Project! This project provides a simple web ap
 
 ### Prerequisites
 
-- Java Development Kit (JDK) version 8 or higher
+- Java Development Kit (JDK) version 17 or higher
 - Maven (for building and managing dependencies)
 - Web browser
 - Mysql database
