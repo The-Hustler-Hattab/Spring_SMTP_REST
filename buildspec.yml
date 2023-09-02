@@ -14,6 +14,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - cd target
 artifacts:
   files:
-    - target/email-service-0.0.1-SNAPSHOT.zip
+    - email-service-0.0.1-SNAPSHOT.zip
