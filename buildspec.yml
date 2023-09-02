@@ -14,8 +14,8 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - mv ./target/email-service-0.0.1-SNAPSHOT.jar email-service-0.0.1-SNAPSHOT.jar
+      - mv ./target/email-service-1.0.0-SNAPSHOT.jar email-service-1.0.0-SNAPSHOT.jar
 artifacts:
   files:
-    - email-service-1.0.0-SNAPSHOT.jar
+    - ./target/*.jar
   discard-paths: yes
