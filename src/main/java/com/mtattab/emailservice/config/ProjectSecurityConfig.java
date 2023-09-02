@@ -21,6 +21,8 @@ public class ProjectSecurityConfig  {
 
 
         .anyRequest().authenticated().and().oauth2Login()
+                .and().logout().logoutSuccessUrl("/")
+
 
 
 ;

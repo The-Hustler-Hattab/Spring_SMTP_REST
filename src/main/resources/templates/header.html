@@ -29,9 +29,12 @@ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
                 </li>
 
             </ul>
+              <ul  class="navbar-nav ml-auto"  sec:authorize="isAuthenticated()">
+                      <li >Welcome,  <span th:text="${currentLoggedInUser}"></span>!</li>
+              </ul>
               <ul  class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link" th:href="@{/}" sec:authorize="isAnonymous()" >Log in</a>
+                      <a class="nav-link" th:href="@{/form}" sec:authorize="isAnonymous()" >Log in</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link"  th:href="@{/logout}"   sec:authorize="isAuthenticated()" >Log out</a>
