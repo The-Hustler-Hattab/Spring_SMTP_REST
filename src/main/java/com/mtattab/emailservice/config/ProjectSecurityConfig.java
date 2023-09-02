@@ -1,0 +1,34 @@
+package com.mtattab.emailservice.config;
+
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+
+
+@Configuration
+public class ProjectSecurityConfig  {
+
+    @Bean
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+//        http.authorizeRequests().anyRequest().permitAll()
+//                .and()
+//                .csrf().disable();
+
+
+        http.authorizeRequests()
+                .requestMatchers("/","/about","/actuator/health").permitAll()
+                .requestMatchers("/css/**","/img/**","/js/**").permitAll()
+
+
+        .anyRequest().authenticated().and().oauth2Login()
+                .and().logout().logoutSuccessUrl("/")
+
+
+;
+        return http.build();
+    }
+
+}
