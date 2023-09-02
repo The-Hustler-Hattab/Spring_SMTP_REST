@@ -16,7 +16,7 @@ public class ProjectSecurityConfig  {
 
 
         http.authorizeRequests()
-                .requestMatchers("/","/about").permitAll()
+                .requestMatchers("/","/about","/actuator/health").permitAll()
                 .requestMatchers("/css/**","/img/**","/js/**").permitAll()
 
 
