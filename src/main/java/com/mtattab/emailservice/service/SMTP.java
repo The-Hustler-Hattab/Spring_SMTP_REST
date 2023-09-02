@@ -66,7 +66,7 @@ public class SMTP implements DisposableBean {
             }else message.setText(messageText);
 
             Transport.send(message);
-            return new ResponseRestModel(HttpStatus.OK.value(), "Email sent successfully.");
+            return new ResponseRestModel(HttpStatus.OK.value(), "Email sent successfully. Please check the spam folder.");
         } catch (MessagingException e) {
             e.printStackTrace();
             return new ResponseRestModel(HttpStatus.INTERNAL_SERVER_ERROR.value(),"Email send failed due to: "+e.getMessage());

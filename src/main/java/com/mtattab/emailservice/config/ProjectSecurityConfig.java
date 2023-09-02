@@ -10,16 +10,22 @@ public class ProjectSecurityConfig  {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().permitAll()
-                .and()
-                .csrf().disable();
-//        http.authorizeRequests()
-//                .requestMatchers("/swagger-ui/index.html").permitAll()
-//
-//        .anyRequest().authenticated().and().oauth2Login()
-//
-//                .and().csrf().disable();
+//        http.authorizeRequests().anyRequest().permitAll()
+//                .and()
+//                .csrf().disable();
 
+
+        http.authorizeRequests()
+                .requestMatchers("/","/about").permitAll()
+                .requestMatchers("/css/**","/img/**","/js/**").permitAll()
+
+
+        .anyRequest().authenticated().and().oauth2Login()
+                .and().logout().logoutSuccessUrl("/")
+
+
+
+;
         return http.build();
     }
 

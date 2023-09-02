@@ -1,4 +1,4 @@
-package com.mtattab.emailservice.controller;
+package com.mtattab.emailservice.restcontroller;
 import com.mtattab.emailservice.consts.Constants;
 import com.mtattab.emailservice.model.EmailJsonModel;
 import com.mtattab.emailservice.model.ResponseRestModel;

@@ -14,8 +14,14 @@ public class EmailJsonModel {
     @NotNull
     String messageText;
     @NotNull
-    boolean isHtmlEnabled;
+    boolean htmlEnabled;
+    public boolean isHtmlEnabled() {
+        return htmlEnabled;
+    }
 
+    public void setHtmlEnabled(boolean htmlEnabled) {
+        this.htmlEnabled = htmlEnabled;
+    }
     @Override
     public String toString() {
         return "EmailJsonModel{" +
@@ -23,7 +29,7 @@ public class EmailJsonModel {
                 ", toEmail='" + toEmail + '\'' +
                 ", subject='" + subject + '\'' +
                 ", messageText='" + messageText + '\'' +
-                ", isHtmlEnabled=" + isHtmlEnabled +
+                ", isHtmlEnabled=" + htmlEnabled +
                 '}';
     }
 }
