@@ -1,9 +1,10 @@
-package com.mtattab.emailservice.service;
+package com.mtattab.emailservice.service.impl;
 
 import java.util.Properties;
 
 import com.mtattab.emailservice.model.ResponseRestModel;
 import com.mtattab.emailservice.repository.EmailRepository;
+import com.mtattab.emailservice.service.SMTPService;
 import com.mtattab.emailservice.util.AESEncryption;
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
@@ -23,7 +24,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Scope("prototype")
 @Slf4j
-public class SMTP implements DisposableBean {
+public class SMTPServiceImpl implements DisposableBean, SMTPService {
 
 
     @Autowired
@@ -35,7 +36,7 @@ public class SMTP implements DisposableBean {
     String password;
     Session session;
 
-    public SMTP(){
+    public SMTPServiceImpl(){
         this.props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
