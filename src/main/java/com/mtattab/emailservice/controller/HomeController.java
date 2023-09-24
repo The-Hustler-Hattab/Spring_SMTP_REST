@@ -3,7 +3,7 @@ package com.mtattab.emailservice.controller;
 import com.mtattab.emailservice.model.EmailJsonModel;
 import com.mtattab.emailservice.model.ResponseRestModel;
 import com.mtattab.emailservice.restcontroller.EmailController;
-import com.mtattab.emailservice.service.SMTP;
+import com.mtattab.emailservice.service.impl.SMTPServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +19,7 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    SMTP smtp;
+    SMTPServiceImpl smtp;
 
 
     @Autowired

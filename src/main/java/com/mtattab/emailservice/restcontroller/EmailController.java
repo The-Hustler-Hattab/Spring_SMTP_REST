@@ -2,7 +2,7 @@ package com.mtattab.emailservice.restcontroller;
 import com.mtattab.emailservice.consts.Constants;
 import com.mtattab.emailservice.model.EmailJsonModel;
 import com.mtattab.emailservice.model.ResponseRestModel;
-import com.mtattab.emailservice.service.SMTP;
+import com.mtattab.emailservice.service.impl.SMTPServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
@@ -17,7 +17,7 @@ import org.springframework.validation.annotation.Validated;
 public class EmailController {
 
     @Autowired
-    SMTP smtp;
+    SMTPServiceImpl smtp;
 
 
     @PostMapping("/sendEmail")
